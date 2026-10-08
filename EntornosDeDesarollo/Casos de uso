@@ -1,0 +1,16 @@
+Casos de uso:
+
+SUBIR CONTENIDO A UNA RED SOCIAL
+
+1. Requisitos previos
+    - El usario debe de estar registrado
+2. Pasos oel flujo de operacion
+    1. El usuario entra en la aplicacion
+    2. El usuario pulsa el boton de subir contenido
+    3. El sistema muestra la galeria de imagenes
+    4. El usuario seleciona la imagen que quiere subir
+    5. El sistema muestra la imagen en pantalla completa, junto a algunas opciones de personalizacion
+    6. El usuario pulsa continuar/aceptar
+    7. El sistema publica la imagen
+3. Casos especiales o incidencias
+    - Durante el paso 6. si el usuario se arrepiente y pulsa cancelar el sistema vuelve a mostrar

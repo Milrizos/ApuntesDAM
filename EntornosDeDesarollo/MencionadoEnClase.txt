@@ -1,0 +1,9 @@
+TIPOS DE DATOS
+- Enteros/Integer/Int               -> Numeros enteros
+- Punto flotante/Decimales/Float    -> Numeros con decimales
+- Cadenas/String                    -> Texto, se suele poner entre "", cada letra usa un byte
+- Logicos/booleanos/boolean/boolean -> Tipo de verdadero y falso
+
+ESTRUCTURAS DE CONTROL
+- Búcles                            -> Repeat, While, For...
+- Condicionales                     -> If, Case ...
