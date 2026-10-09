@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "f2fd37ea9dcffbe5",
+    "id": "ee15dc3ee1a302a4",
     "type": "split",
     "children": [
       {
-        "id": "d5777aa0f2e74b9d",
+        "id": "d479f7770fcfb6e3",
         "type": "tabs",
         "children": [
           {
-            "id": "fad07588652eb8bb",
+            "id": "5ba935d4b176c613",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "64523fad6f5aaa9b",
+    "id": "54b31ccb9f081cf3",
     "type": "split",
     "children": [
       {
-        "id": "89b09fc0ca197ef8",
+        "id": "d102468e5cfa3e36",
         "type": "tabs",
         "children": [
           {
-            "id": "d998f5ad91cf603f",
+            "id": "5ae67a10899c5e95",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "0c6ab7a402967a06",
+            "id": "d5e5a16662b068b9",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -67,7 +67,7 @@
             }
           },
           {
-            "id": "4e1808b2faea23a9",
+            "id": "06ad39237dfd2fd5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -86,20 +86,19 @@
     "width": 300
   },
   "right": {
-    "id": "26290fb1ad2bc740",
+    "id": "3d2679f7f556c836",
     "type": "split",
     "children": [
       {
-        "id": "5375ba8419024d2f",
+        "id": "6a77787a15434b9a",
         "type": "tabs",
         "children": [
           {
-            "id": "de1418f3d7fc0ced",
+            "id": "41adf5c5c52f1546",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LenguajeDeMarcas/Apuntes/Sin título.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,12 +112,11 @@
             }
           },
           {
-            "id": "5f0167bbe211d214",
+            "id": "b3c1e1d9740a36d7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LenguajeDeMarcas/Apuntes/Sin título.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -127,7 +125,7 @@
             }
           },
           {
-            "id": "a4635bafb69fb0e6",
+            "id": "8106e0378b08e082",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -142,7 +140,7 @@
             }
           },
           {
-            "id": "dd2d0bac5bb5e042",
+            "id": "9b197dc82db8f3eb",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -156,12 +154,11 @@
             }
           },
           {
-            "id": "a5199df032d79b67",
+            "id": "670730a6c2a7a6c8",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "LenguajeDeMarcas/Apuntes/Sin título.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -186,17 +183,9 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
-      "github-sync:Sync with Remote": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fad07588652eb8bb",
-  "lastOpenFiles": [
-    "Sin título.base",
-    "2026-10-08.md",
-    "Sin título.canvas",
-    "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
-    "Pasted image 20261008204246.png",
-    "Pasted image 20261008204331.png"
-  ]
+  "active": "5ba935d4b176c613",
+  "lastOpenFiles": []
 }
