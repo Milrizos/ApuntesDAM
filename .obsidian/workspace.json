@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
+                "file": "BaseDeDatos/Comandos_MySQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS"
+              "title": "Comandos_MySQL"
             }
           }
         ]
@@ -187,5 +187,8 @@
     }
   },
   "active": "5ba935d4b176c613",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
+    "BaseDeDatos/Comandos_MySQL.md"
+  ]
 }
