@@ -1,5 +1,9 @@
 {
   "interfaceFontFamily": "Iosevka Nerd Font",
   "monospaceFontFamily": "Iosevka Nerd Font Mono",
-  "textFontFamily": "Iosevka Nerd Font"
+  "textFontFamily": "Iosevka Nerd Font",
+  "nativeMenus": false,
+  "theme": "moonstone",
+  "cssTheme": "Things",
+  "accentColor": ""
 }
