@@ -7,3 +7,15 @@ TIPOS DE DATOS
 ESTRUCTURAS DE CONTROL
 - Búcles                            -> Repeat, While, For...
 - Condicionales                     -> If, Case ...
+
+MODIFICADORES DE ACCESO
+- Publicas                          -> Accesible desde cualquier lugar donde sea visible 
+- Privadas                          -> Solo se puede acceder desde la propia clase
+- Protegidas                        -> Accesible desde la clase, el paquete y sus subclases
+
+PARTES DE UNA CLASES
+- Clase                             -> Plantilla para crear objetos
+- Objetos                           -> Elemento creado a partir de una clase
+- Atributos                         -> Datos que tiene un objeto
+- Propiedades                       -> Lo que tiene que guardar la clase
+- Métodos                           -> Cosas que la clase puede hacer
