@@ -166,12 +166,23 @@
               "icon": "lucide-list",
               "title": "Esquema"
             }
+          },
+          {
+            "id": "f43d457b40a8b8ac",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 331.1015625,
     "collapsed": true
   },
   "left-ribbon": {
@@ -189,6 +200,8 @@
   "active": "5ba935d4b176c613",
   "lastOpenFiles": [
     "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
+    "BaseDeDatos/Practicas/Practica_ModeloER_ModeloRelacional(DiegoCortésGallego).pdf",
+    "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
     "BaseDeDatos/MySQL - Comandos Básicos y DDL.md"
   ]
 }
