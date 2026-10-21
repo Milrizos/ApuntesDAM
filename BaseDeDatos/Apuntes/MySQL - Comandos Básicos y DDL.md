@@ -10,13 +10,13 @@ tags:
 ## --- Comandos basicos de MySQL --- MODELO FISICO --- NO LO SUELE PREGUNTAR, LO HACE DEL REVES ---
 
 * `EXIT;` -> Sale duh.
-* `USE [base de datos];`** -> Entrar en la base de datos
-* `SOURCE [ruta de archivo]`** -> Ejecuta un script en MySQL
-* `SHOW TABLES;`** -> Muestra la los atributos(columnas) de la base de datos
-    * `SHOW DATABASES;`** -> Muestra las base de datos creadas
-* `DROP TABLE [tabla];`** -> Borra una tabla en especifico
-* `DESCRIBE [base de datos];`** -> Muestra las caracteristicas de los atributos(columnas) de la base de datos
-* `CREATE TABLE [atributos]([opciones](Nº))`** -> Crea tablas con caracteristicas (similar a Acces), (se separan por comas para distintos atributos), Nº es para limitar la cantidad
+* `USE [base de datos];` -> Entrar en la base de datos
+* `SOURCE [ruta de archivo]` -> Ejecuta un script en MySQL
+* `SHOW TABLES;` -> Muestra la los atributos(columnas) de la base de datos
+    * `SHOW DATABASES;` -> Muestra las base de datos creadas
+* `DROP TABLE [tabla];` -> Borra una tabla en especifico
+* `DESCRIBE [base de datos];` -> Muestra las caracteristicas de los atributos(columnas) de la base de datos
+* `CREATE TABLE [atributos]([opciones](Nº))` -> Crea tablas con caracteristicas (similar a Acces), (se separan por comas para distintos atributos), Nº es para limitar la cantidad
     * `CREATE OR REPLAZE TABLE [atributos];`** -> Si ya existe la reemplaza (opcional)
     * `CREATE DATABASE [nombre];`** -> Crea una BD
 * `DROP DATABASE [base de datos];`** -> Elimina una base de datos
