@@ -24,7 +24,7 @@ tags:
 * `INSERT INTO [Tabla](atributo) VALUES([valores]);` -> Inserta valores a los atributos de la BD (se separan por comas para distintos atributos)
 * `ALTER TABLE [Tabla] MODIFY COLUMN [atributo] [valor];` -> Modifica el valor de un atributo (columna), hay excepciones para atributos que sean referenciados en otra tabla
     * `ALTER TABLE [Tabla] ADD [valor];` -> Añade un atributo (columna), muy útil para cuando hay relaciones en ambos lados
-
+* `SET FOREIGN_KEY_CHECKS = [1 o 0];` -> Activa o desactiva las FK, importante cuando hay referencias que no funcionan porque no hay nada todavía 
 ---
 
 ## --- Opciones ---
@@ -52,7 +52,6 @@ tags:
 * `BIGINT(nº MAX)` -> Tipo de campo numérico largo permite negativos y positivos
 * `TINYINT(nº MAX)` -> Tipo de campo numérico pequeño un total de 256 nº (del 0 al 255) permite negativos y positivos
 * `DECIMAL(nº MAX)` -> Tipo de campo numérico que permite decimales
-
 ---
 
 ## --- Comentarios ---

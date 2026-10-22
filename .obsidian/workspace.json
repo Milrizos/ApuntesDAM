@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 293.36328125,
+    "collapsed": true
   },
   "right": {
     "id": "3d2679f7f556c836",
@@ -199,9 +200,9 @@
   },
   "active": "5ba935d4b176c613",
   "lastOpenFiles": [
+    "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
     "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
     "BaseDeDatos/Practicas/Practica_ModeloER_ModeloRelacional(DiegoCortésGallego).pdf",
-    "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
     "BaseDeDatos/MySQL - Comandos Básicos y DDL.md"
   ]
 }
