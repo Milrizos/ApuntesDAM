@@ -25,6 +25,9 @@ tags:
 * `ALTER TABLE [Tabla] MODIFY COLUMN [atributo] [valor];` -> Modifica el valor de un atributo (columna), hay excepciones para atributos que sean referenciados en otra tabla
     * `ALTER TABLE [Tabla] ADD [valor];` -> Añade un atributo (columna), muy útil para cuando hay relaciones en ambos lados
 * `SET FOREIGN_KEY_CHECKS = [1 o 0];` -> Activa o desactiva las FK, importante cuando hay referencias que no funcionan porque no hay nada todavía 
+* `SYSTEM [comando]];` -> Permite poner comandos de linux dentro de MySQL, útil cuando se usa con `clean`
+* `CHARACTER SET utf8mb4` -> Codificación de caracteres 
+* `COLLATE utf8mb4_unicode_ci;` -> Añade la codificación de español (añade la ñ) 
 ---
 
 ## --- Opciones ---
