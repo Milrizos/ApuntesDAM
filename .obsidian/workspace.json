@@ -169,13 +169,23 @@
               "icon": "lucide-list",
               "title": "Esquema"
             }
+          },
+          {
+            "id": "20f3325e65b45322",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,12 +196,12 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
-      "github-sync:Sync with Remote": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fad07588652eb8bb",
+  "active": "d998f5ad91cf603f",
   "lastOpenFiles": [
+    "Sin nombre",
     "Sin título.base",
     "2026-10-08.md",
     "Sin título.canvas",
