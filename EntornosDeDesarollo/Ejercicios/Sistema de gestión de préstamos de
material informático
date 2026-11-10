@@ -1,0 +1,5 @@
+Requisirtos
+    Requisirtos funcionales
+        RF01 - El sistema debe permitir registrar el material disponible junto un id, descripción marca, modelo y estado de conservación
+        RF02 - El sistema debe permitir registrar a las parsonas que pueden solicitar préstamos junto a un id, nombre, apellidos y email
+        RF03 - El sistema debe registrar un perstamo cuando una persona lo una persona lo solicite y guardara quien lo solocita, que dispositivo solicita, la fecha en el que se solicite y la fecha de devolucion
