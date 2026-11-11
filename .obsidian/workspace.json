@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BaseDeDatos/Apuntes/CAPÍTULO 1 - DISEÑO CONCEPTUAL.md",
+                "file": "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CAPÍTULO 1 - DISEÑO CONCEPTUAL"
+              "title": "MySQL - Comandos Básicos y DDL"
             }
           }
         ],
@@ -215,8 +215,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d998f5ad91cf603f",
+  "active": "2e6d7b0b51c7a4b9",
   "lastOpenFiles": [
+    "BaseDeDatos/Apuntes/CAPÍTULO 1 - DISEÑO CONCEPTUAL.md",
     "BaseDeDatos/Imagenes/Pasted image 20261103205636.png",
     "BaseDeDatos/Imagenes/Pasted image 20261103205609.png",
     "BaseDeDatos/Imagenes/Pasted image 20261103205548.png",
@@ -227,11 +228,9 @@
     "BaseDeDatos/Imagenes/Pasted image 20261103205356.png",
     "BaseDeDatos/Imagenes/Pasted image 20261103205323.png",
     "BaseDeDatos/Imagenes/Pasted image 20261103205306.png",
-    "BaseDeDatos/Imagenes/Pasted image 20261103205250.png",
     "BaseDeDatos/Imagenes",
     "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
     "Sin título.canvas",
-    "BaseDeDatos/Apuntes/CAPÍTULO 1 - DISEÑO CONCEPTUAL.md",
     "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
     "LenguajeDeMarcas/Practicas/Imagenes/PLAN_DE_PRUEBAS_SK_2026_39_TIC_Administracin_de_Sistemas_en_Red.pdf",
     "LenguajeDeMarcas/Practicas/Imagenes/PLAN_DE_PRUEBAS_SK_2026_17_Desarrollo_Web.pdf",
