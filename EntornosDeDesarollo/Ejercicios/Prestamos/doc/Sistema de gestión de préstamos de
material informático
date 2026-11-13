@@ -1,0 +1,138 @@
+1. Requisitos
+    Requisitos funcionales
+        RF01 - El sistema debe permitir registrar el material informático disponible, con id único, descripción, marca, modelo y estado.
+        RF02 - El sistema debe permitir registrar a las personas que pueden solicitar préstamos, con un id único, nombre, apellidos y email.
+        RF03 - El sistema debe permitir registrar un préstamo cuando una persona solicite un dispositivo, guardando quién lo solicita, qué dispositivo se presta, la fecha en la que se realiza la operación y la fecha prevista de devolución.
+        RF04 - El sistema debe permitir registrar la devolución de un dispositivo, guardando la fecha real de devolución.
+        RF05 - El sistema debe identificar un préstamo como devuelto con retraso cuando la fecha real de devolución sea posterior a la fecha prevista.
+        RF06 - El sistema debe permitir consultar los dispositivos que se encuentran disponibles.
+        RF07 - El sistema debe permitir consultar los préstamos actualmente activos.
+        RF08 - El sistema debe permitir consultar el historial de préstamos de una persona concreta y un dispositivo concreto.
+        RF09 - El sistema debe permitir dar de baja un dispositivo que haya quedado obsoleto o no pueda repararse.
+
+    Requisitos no funcionales
+        RNF01 - La aplicación debe utilizarse desde los ordenadores del instituto (sin acceso desde dispositivos móviles en esta primera versión).
+        RNF02 - En esta primera versión, el sistema no debe integrarse con otros sistemas informáticos del centro.
+        RNF03 - La aplicación se desarrollara en Java y para el OS de los ordenadores del centro.
+        RNF04 - La información registrada debe guardarse en disco o base de datos local para no perder los datos.
+        RNF05 - El sistema debe sersencillo y mantenible.
+
+    Reglas de negocio
+        RN01 - Cada dispositivo debe tener un id único que permita distinguirlo sin dudas.
+        RN02 - Cada persona debe tener un id único que permita distinguirlo sin dudas.
+        RN03 - Un dispositivo no puede prestarse si ya está prestado, si se encuentra dado de baja o si está marcado como no disponible por una avería.
+        RN04 - La baja de un dispositivo no debe eliminar el historial de préstamos asociado a dicho dispositivo.
+        RN05 - Para registrar un préstamo, tanto la persona solicitante como el dispositivo deben estar previamente registrados en el sistema.
+        RN06 - La fecha prevista de devolución debe ser igual o posterior a la fecha de realización del préstamo, y la fecha real de devolución no puede ser anterior a la fecha del préstamo.
+        RN07 - Solo se puede registrar la devolución de un préstamo que se encuentre actualmente activo (que no haya sido devuelto previamente).
+        RN08 - Un préstamo devuelto en una fecha real igual o anterior a la fecha prevista se considerará devuelto en plazo.
+
+2. Análisis
+    Actores y responsabilidades
+        Personal responsable
+            - Es el personal encargado de gestionar el material informático desde los ordenadores del instituto.
+            - Responsabilidades:
+                - Dar de alta dispositivos y actualizar su estado (avería o baja).
+                - Registrar a las personas autorizadas para solicitar préstamos.
+                - Registrar los préstamos solicitados por el profesorado y el alumnado.
+                - Registrar las devoluciones de los dispositivos.
+                - Consultar los dispositivos disponibles, los préstamos activos y los historiales por persona o dispositivo.
+        Persona solicitante: Profesorado y Alumnado
+
+    Casos de uso principales
+        CU01 - Registrar dispositivo (Relacionado con RF01, RN01)
+            - Actor principal: Personal responsable.
+            - Objetivo: Dar de alta un nuevo dispositivo en el inventario.
+            - Resultado: El dispositivo queda registrado en estado disponible.
+        CU02 - Registrar persona (Relacionado con RF02, RN02)
+            - Actor principal: Personal responsable.
+            - Objetivo: Dar de alta a un alumno o profesor para que pueda solicitar préstamos.
+            - Resultado: La persona queda registrada en el sistema.
+        CU03 - Registrar préstamo (Relacionado con RF03, RN03, RN05, RN06)
+            - Actor principal: Personal responsable.
+            - Objetivo: Registrar el préstamo de un dispositivo disponible a una persona registrada.
+            - Resultado: El préstamo queda registrado como activo y el dispositivo pasa a estar prestado.
+            - Detalle del caso de uso (siguiendo la estructura de análisis):
+                - Precondiciones:
+                    1. La persona solicitante debe estar registrada en el sistema.
+                    2. El dispositivo debe estar registrado en el sistema.
+                    3. El dispositivo debe encontrarse en estado disponible.
+                - Flujo principal:
+                    1. El personal responsable selecciona la opción de registrar préstamo.
+                    2. El sistema solicita el identificador de la persona y el código del dispositivo.
+                    3. El personal responsable introduce ambos datos y la fecha prevista de devolución.
+                    4. El sistema comprueba que la persona existe.
+                    5. El sistema comprueba que el dispositivo existe y está disponible.
+                    6. El sistema comprueba que la fecha prevista es válida (>= fecha actual).
+                    7. El sistema registra el préstamo con la fecha actual de realización y la fecha prevista.
+                    8. El sistema cambia el estado de disponibilidad del dispositivo a prestado.
+                    9. El sistema muestra la confirmación del préstamo.
+                - Excepciones:
+                    - Persona no registrada: El sistema informa de que la persona no existe, el préstamo no se realiza y el caso de uso finaliza.
+                    - Dispositivo no registrado: El sistema informa de que el código no existe, el préstamo no se realiza y el caso de uso finaliza.
+                    - Dispositivo no disponible: El sistema informa del motivo por el que no está disponible, el préstamo no se realiza y el caso de uso finaliza.
+                    - Fecha prevista inválida: El sistema informa de que la fecha prevista no puede ser anterior a la fecha del préstamo, la operación no se realiza.
+        CU04 - Registrar devolución (Relacionado con RF04, RF05, RN07, RN08)
+            - Actor principal: Personal responsable.
+            - Objetivo: Dejar constancia de la devolución de un dispositivo prestado y detectar posibles retrasos.
+            - Resultado: El préstamo pasa a estar cerrado con su fecha real de devolución (y marcado con retraso si ocurre) y el dispositivo vuelve a estar disponible.
+            - Detalle del caso de uso:
+                - Precondiciones:
+                    1. El dispositivo debe existir y tener un préstamo activo asociado.
+                - Flujo principal:
+                    1. El personal responsable selecciona la opción de registrar devolución.
+                    2. El sistema solicita el código del dispositivo (o identificador del préstamo activo).
+                    3. El personal responsable introduce el dato.
+                    4. El sistema localiza el préstamo activo y registra la fecha real de devolución (fecha actual).
+                    5. El sistema compara la fecha real con la fecha prevista, si es posterior, marca el préstamo como devuelto con retraso.
+                    6. El sistema cambia el estado del dispositivo a disponible (salvo que en ese momento se indique una avería).
+                    7. El sistema muestra la confirmación de la devolución indicando si hubo retraso.
+                - Excepciones:
+                    - Dispositivo o préstamo inexistente: El sistema informa del error y finaliza.
+                    - El dispositivo no tiene ningún préstamo activo: El sistema informa de que ya figuraba como no prestado y no realiza cambios.
+        CU05 - Consultar dispositivos disponibles (Relacionado con RF06)
+            - Actor principal: Personal responsable.
+            - Objetivo: Obtener el listado de material listo para ser prestado.
+        CU06 - Consultar préstamos activos (Relacionado con RF07)
+            - Actor principal: Personal responsable.
+            - Objetivo: Conocer qué dispositivos están prestados actualmente y quién los tiene.
+        CU07 - Consultar historial de préstamos de una persona (Relacionado con RF08)
+            - Actor principal: Personal responsable.
+            - Objetivo: Ver todos los préstamos (activos y finalizados) realizados por una persona concreta.
+        CU08 - Consultar historial de préstamos de un dispositivo (Relacionado con RF08, RN04)
+            - Actor principal: Personal responsable.
+            - Objetivo: Ver todos los préstamos asociados a un dispositivo, incluso si está dado de baja.
+        CU09 - Dar de baja un dispositivo (Relacionado con RF9, RN04)
+            - Actor principal: Personal responsable.
+            - Objetivo: Marcar como dado de baja un dispositivo obsoleto o irreparable manteniendo su historial.
+            - Excepción: No se permitirá dar de baja si el dispositivo tiene un préstamo activo sin devolver.
+
+    Datos que deben almacenarse
+        Datos del Dispositivo
+            - codigoIdentificativo (Entero único, Origen: Personal responsable) - Identifica de forma única cada equipo o periférico.
+            - descripcion (Texto, Origen: Personal responsable) - Describe el tipo de material (ej. portátil, proyector, ratón).
+            - marca (Texto, Origen: Personal responsable) - Fabricante del dispositivo.
+            - modelo (Texto, Origen: Personal responsable) - Modelo concreto del dispositivo.
+            - estadoConservacion (Texto, Origen: Personal responsable) - Estado físico del material (ej. nuevo, bueno, desgastado).
+            - estadoDisponibilidad (Enumerado, Origen: Sistema / Personal responsable) - Indica si está disponible, prestado, averiado o dado de baja.
+        Datos de la Persona
+            - idPersona (Entero único, Origen: Personal responsable / Sistema) - Distingue sin ambigüedades a cada persona.
+            - nombre (Texto, Origen: Personal responsable) - Nombre de la persona.
+            - apellidos (Texto, Origen: Personal responsable) - Apellidos de la persona.
+            - correoInstitucional (Texto, Origen: Personal responsable) - Correo electrónico del instituto.
+        Datos del Préstamo
+            - idPrestamo (Entero único, Origen: Sistema) -  Identifica cada operación de préstamo de forma inequívoca en el historial.
+            - persona (Referencia a Persona, Origen: Personal responsable) - Quién solicita el préstamo.
+            - dispositivo (Referencia a Dispositivo, Origen: Personal responsable) - Qué dispositivo se presta.
+            - fechaPrestamo (Fecha, Origen: Sistema) - Fecha en que se realiza el préstamo.
+            - fechaPrevistaDevolucion (Fecha, Origen: Personal responsable / Sistema) - Fecha límite prevista para devolver el dispositivo.
+            - fechaRealDevolucion (Fecha o nulo, Origen: Sistema) - Fecha en que se devuelve realmente (nula mientras el préstamo sigue activo).
+
+    Restricciones para mantener la coherencia de los datos
+        - Unicidad de identificadores: No pueden existir dos dispositivos con el mismo código ni dos personas con el mismo identificador (ni mismo correo institucional).
+        - Integridad referencial: Todo préstamo debe apuntar a una persona y a un dispositivo existentes en el sistema.
+        - Integridad del historial: Un dispositivo dado de baja no se elimina físicamente del sistema, evitando que queden préstamos huérfanos en el historial.
+        - Exclusividad de préstamo activo: Un mismo dispositivo no puede tener más de un préstamo activo simultáneamente (con fechaRealDevolucion nula).
+        - Coherencia entre estado y préstamos: Si un dispositivo está en estado PRESTADO, debe existir exactamente un préstamo activo asociado a él.
+        - Coherencia temporal: fechaPrevistaDevolucion >= fechaPrestamo y, al devolver, fechaRealDevolucion >= fechaPrestamo.
+        - Campos obligatorios: No se admiten valores vacíos en código, descripción, marca, modelo, estado de conservación, id de persona, nombre, apellidos, correo ni fechas de inicio y prevista.
