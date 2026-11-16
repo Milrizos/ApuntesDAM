@@ -31,7 +31,7 @@ tags:
 * `ALTER TABLE [Tabla] MODIFY COLUMN [atributo] [valor];` -> Modifica el valor de un atributo (columna), hay excepciones para atributos que sean referenciados en otra tabla
     * `ALTER TABLE [Tabla] ADD [valor];` -> Añade un atributo (columna), muy útil para cuando hay relaciones en ambos lados
 * `SET FOREIGN_KEY_CHECKS = [1 o 0];` -> Activa o desactiva las FK, importante cuando hay referencias que no funcionan porque no hay nada todavía 
-* `SYSTEM [comando]];` -> Permite poner comando de linux dentro de MySQL, útil cuando se usa con `clean`
+* `SYSTEM [comando]];` -> Permite poner comando de linux dentro de MySQL, útil cuando se usa con `clear`
 * `CHARACTER SET utf8mb4` -> Codificación de caracteres 
 * `COLLATE utf8mb4_unicode_ci;` -> Añade la codificación de español (añade la ñ) 
 * `UPDATE [tabla] SET [atributo]=[se quiere cambiar] WHERE [atributo]=[quieres que se cambie];` -> Permite cambiar el valor de un campo
@@ -51,6 +51,8 @@ tags:
 * `FOREIGN KEY [nombre] REFERENCES [tabla](pk)` -> Sirve para relacionar una columna con la clave de otra tabla
 * `IF NOT EXIST` -> Lo hace si no existe
 * `CHECK(condicion)` -> Permite poner condiciones simples "<>", "&&", "||", etc
+* `ROUND(([atributo]),[cantidad de dicimales])` -> Sirve para redondear
+* `TRUNCATE(([atributo]),[cantidad de dicimales])` -> Sirve para truncar
 
 ### - Tipos -
 * `VARCHAR(Nº MAX)` -> Tipo de campo de texto de longitud
