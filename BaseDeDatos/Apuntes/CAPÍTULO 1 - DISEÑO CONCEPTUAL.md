@@ -25,9 +25,7 @@ tags:
   * **Entidades fuertes (o regulares):** Poseen existencia propia e identificadores internos que distinguen unívocamente a cada ocurrencia.
   * **Entidades débiles:** Carecen de autonomía completa; dependen de otra entidad regular:
     * *Dependencia en Existencia:* Los ejemplares de la entidad débil no pueden existir en la base de datos si desaparece el ejemplar de la entidad regular del que dependen. Sin embargo, **poseen un identificador propio** que los distingue globalmente (ej., cada edición de un curso tiene un código único global $E_1, E_2, E_3$).
-      * `[insertar imagen de figura 14.24: Dependencia en existencia]`
     * *Dependencia en Identificación:* Además de no poder existir sin la entidad regular, la entidad débil **no puede identificarse por sí misma**. Requiere obligatoriamente incorporar el identificador de la entidad fuerte para formar su clave (ej., la edición $E_1$ del curso $C_1$ necesita de ambos: $Id\_Edición = Cod\_Curso + Num\_edición$).
-      * `[insertar imagen de figura 14.25: Dependencia en identificación]`
     * *Regla fundamental:* Toda dependencia en identificación es **siempre** una dependencia en existencia (la inversa no siempre se cumple).
 
 ---
@@ -42,7 +40,6 @@ tags:
 * **Concepto de Dominio:**
   * Conjunto de valores válidos para un atributo.
   * *Criterio metodológico del texto:* Por convención, se asume que el dominio lleva el mismo nombre que el atributo para simplificar el diagrama, salvo requerimiento explícito.
-  ![[Pasted image 20261103204603.png|496]]
 * **Restricciones semánticas sobre atributos:**
   * **Obligatorios vs. Opcionales:** Si deben poseer valor obligatoriamente o admiten valores nulos/ausentes.
   * **Univaluados vs. Multivaluados:** Si toman un solo valor o una colección de valores por cada ejemplar.
@@ -62,7 +59,6 @@ tags:
   * **Tipo de correspondencia:** Cardinalidad máxima ($1:1$, $1:N$, $N:M$).
   * **Restricción de cardinalidad $(min, max)$:** Mínimo y máximo de ejemplares con los que puede asociarse una ocurrencia:
     * Frecuentes: $(0,1)$, $(1,1)$, $(0,N)$, $(1,N)$ o valores numéricos concretos $(0, Num_1)$, etc.
-	![[Pasted image 20261103204756.png|496]]
 
 ---
 
@@ -72,29 +68,24 @@ tags:
 * **Redistribución de atributos:**
   * Atributos comunes $\rightarrow$ Pasan al **supertipo**.
   * Atributos específicos $\rightarrow$ Pasan al **subtipo** correspondiente.
-  * `[insertar imagen de figura 1.3: Ejemplo de generalización]`
 
 * **Las 4 combinaciones posibles de generalización:**
 
   1. **Total sin solapamiento (Exclusiva y Total):**  
      Todo elemento del supertipo debe pertenecer obligatoriamente a un único subtipo.  
      *Ejemplo:* `EMPLEADO` clasificado por *Clase de trabajo* en `DOCENTE` o `NO DOCENTE`.  
-     `[insertar imagen de ejemplo de generalización total sin solapamiento]`
 
   2. **Parcial sin solapamiento (Exclusiva y Parcial):**  
      Un elemento puede no pertenecer a ningún subtipo, pero si pertenece, solo puede ser de uno.  
      *Ejemplo:* `DOCUMENTO` clasificado por *Clase* en `LIBRO` o `ARTICULO` (pudiendo existir otros tipos de documentos).  
-     `[insertar imagen de ejemplo de generalización parcial sin solapamiento]`
 
   3. **Total con solapamiento (Solapada y Total):**  
      Todo elemento del supertipo debe pertenecer al menos a un subtipo, pudiendo pertenecer a varios simultáneamente.  
      *Ejemplo:* `PERSONA` clasificada por *Tipo* en `EMPLEADO` y/o `ESTUDIANTE`.  
-     `[insertar imagen de ejemplo de generalización total con solapamiento]`
 
   4. **Parcial con solapamiento (Solapada y Parcial):**  
      Un elemento puede no pertenecer a ningún subtipo, o pertenecer a más de uno al mismo tiempo.  
      *Ejemplo:* `EMPLEADO` clasificado por *Función* en `DOCENTE` y/o `INVESTIGADOR` (puede no ser ninguno de los dos o ser ambos).  
-     `[insertar imagen de ejemplo de generalización parcial con solapamiento]`
 
 ---
 
@@ -124,27 +115,27 @@ tags:
 ## 4. NOTACIONES Y REPRESENTACIÓN GRÁFICA
 
 * **Entidades:**
-  * Entidad fuerte: Rectángulo simple. `[insertar imagen de notación de Entidad (fuerte)]`
-  * Entidad débil: Rectángulo de doble trazo. `[insertar imagen de notación de Entidad débil]`
+  * Entidad fuerte: Rectángulo simple.
+  * Entidad débil: Rectángulo de doble trazo.
 * **Atributos:**
-  * Identificador Principal (IP): Círculo relleno. `[insertar imagen de notación de Identificador Principal (IP)]`
-  * Identificador Alternativo (IA): Círculo mitad relleno. `[insertar imagen de notación de Identificador Alternativo (IA)]`
-  * Descriptor simple: Círculo vacío. `[insertar imagen de notación de Atributo]`
-  * Multivaluado: Doble flecha en la base. `[insertar imagen de notación de Atributo Multivaluado]`
-  * Compuesto: Ramificación arbórea de círculos. `[insertar imagen de notación de Atributo Compuesto]`
-  * Multivaluado Compuesto: Ramificación combinada con símbolo multivaluado. `[insertar imagen de notación de Atributo Multivaluado Compuesto]`
-  * Opcional: Línea discontinua con círculo vacío. `[insertar imagen de notación de Atributo Opcional]`
-  * Derivado: Círculo vacío con etiqueta descriptiva de cálculo. `[insertar imagen de notación de Atributo Derivado]`
-  * Dominio: Óvalo. `[insertar imagen de notación de Dominio]`
+  * Identificador Principal (IP): Círculo relleno.
+  * Identificador Alternativo (IA): Círculo mitad relleno.
+  * Descriptor simple: Círculo vacío.
+  * Multivaluado: Doble flecha en la base.
+  * Compuesto: Ramificación arbórea de círculos.
+  * Multivaluado Compuesto: Ramificación combinada con símbolo multivaluado.
+  * Opcional: Línea discontinua con círculo vacío.
+  * Derivado: Círculo vacío con etiqueta descriptiva de cálculo.
+  * Dominio: Óvalo.
 * **Interrelaciones:**
-  * Normal: Rombo simple. `[insertar imagen de notación de Interrelación]`
-  * Débil en Existencia: Rombo con triángulo interior y etiqueta **E** (o sin etiqueta). `[insertar imagen de notación de Interrelación con Dependencia en Existencia]`
-  * Débil en Identificación: Rombo con triángulo interior y etiqueta **Id** (o ID). `[insertar imagen de notación de Interrelación con dependencia en Identificación]`
+  * Normal: Rombo simple.
+  * Débil en Existencia: Rombo con triángulo interior y etiqueta **E** (o sin etiqueta).
+  * Débil en Identificación: Rombo con triángulo interior y etiqueta **Id** (o ID).
 * **Jerarquías de Generalización:**
-  * Solapada y Parcial: Triángulo invertido sin marcas. `[insertar imagen de notación de Jerarquía solapada y parcial]`
-  * Solapada y Total: Triángulo invertido con círculo/nodo en la parte superior. `[insertar imagen de notación de Jerarquía solapada y total]`
-  * Exclusiva y Parcial: Triángulo invertido con arco horizontal. `[insertar imagen de notación de Jerarquía exclusiva y parcial]`
-  * Exclusiva y Total: Triángulo invertido con arco horizontal y círculo/nodo superior. `[insertar imagen de notación de Jerarquía exclusiva y total]`
+  * Solapada y Parcial: Triángulo invertido sin marcas.
+  * Solapada y Total: Triángulo invertido con círculo/nodo en la parte superior.
+  * Exclusiva y Parcial: Triángulo invertido con arco horizontal.
+  * Exclusiva y Total: Triángulo invertido con arco horizontal y círculo/nodo superior.
 
 ---
 
@@ -156,7 +147,6 @@ tags:
   * Debido a la simetría, una de las mitades diagonales se anula mediante tachaduras/cruces.
   * *Limitación:* Solo modela relaciones binarias (grado dos).
   * *Utilidad:* Permite identificar interrelaciones implícitas deducibles por sentido común, que deben ser validadas con el usuario.
-  ![[Pasted image 20261103205636.png]]
 
 * **Paso 3: Construcción del Esquema Conceptual Inicial**
   * Trazado de diagramas E/R incorporando las entidades, atributos, interrelaciones y correspondencias deducidas en la matriz.
@@ -170,3 +160,6 @@ tags:
   * Inspección de ciclos cerrados entre entidades vinculadas semánticamente de forma equivalente.
   * Se comprueba si al suprimir una interrelación intermedia, la semántica y navegación asociativa pueden reconstruirse íntegramente a través del camino alternativo.
   * Exige la verificación estricta de las cardinalidades mínimas y máximas en ambos sentidos del ciclo antes de proceder a la eliminación.
+
+# --- Referencias a otros apuntes---
+* [[MySQL - Comandos Básicos y DDL]] -> Para ver como se lleva a la practica

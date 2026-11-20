@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d5777aa0f2e74b9d",
+        "id": "ae0dc8217f774dfc",
         "type": "tabs",
         "children": [
           {
-            "id": "79f2334104b0cc1f",
+            "id": "af7dc8aba94ad436",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BaseDeDatos/Apuntes/MySQL - Consultas.md",
+                "file": "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL - Consultas"
+              "title": "MySQL - Comandos Básicos y DDL"
             }
           }
         ]
@@ -200,11 +200,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "79f2334104b0cc1f",
+  "active": "d998f5ad91cf603f",
   "lastOpenFiles": [
+    "Sin título.base",
     "BaseDeDatos/Apuntes/MySQL - Comandos Básicos y DDL.md",
-    "BaseDeDatos/Apuntes/MySQL - Consultas.md",
+    "2026-11-20.md",
+    "Sin título.canvas",
     "BaseDeDatos/Apuntes/CAPÍTULO 1 - DISEÑO CONCEPTUAL.md",
+    "BaseDeDatos/Apuntes/MySQL - Consultas.md",
+    "[[MySQL.md",
+    "\"MySQL.md",
+    "[MySQL.md",
+    "MySQL.md",
+    "Pasted image 20261103205636.png.md",
     "BaseDeDatos/Practicas/Scripts/JorgeSanchez1.1.2.sql",
     "BaseDeDatos/Practicas/Scripts/JorgeSanchez1.1.2.txt",
     "BaseDeDatos/Practicas/Scripts/JorgeSanchez1.1.2.txt.part",
@@ -223,10 +231,8 @@
     "BaseDeDatos/Imagenes/Pasted image 20261103205323.png",
     "BaseDeDatos/Imagenes/Pasted image 20261103205306.png",
     "BaseDeDatos/Imagenes",
-    "Sin título.canvas",
     "LenguajeDeMarcas/Apuntes/UT 01 - INTRODUCCIÓN A LOS LENGUAJES DE MARCAS.md",
     "LenguajeDeMarcas/Practicas/Imagenes/PLAN_DE_PRUEBAS_SK_2026_39_TIC_Administracin_de_Sistemas_en_Red.pdf",
-    "LenguajeDeMarcas/Practicas/Imagenes/PLAN_DE_PRUEBAS_SK_2026_17_Desarrollo_Web.pdf",
     "2026-10-08.md"
   ]
 }
